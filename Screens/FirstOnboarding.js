@@ -45,7 +45,7 @@ export default class FirstOnboarding extends React.Component {
           <Text style={{color:"#fff",fontFamily:"SpartanMedium",fontSize:22}}>get started</Text>
         </TouchableOpacity>
       </View>
-    );
+    ); 
   }
     else {
       return <AppLoading />;
