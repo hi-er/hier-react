@@ -1,14 +1,15 @@
 {
   "expo": {
     "name": "hier",
-    "slug": "hier",
+    "slug": "hier-app",
+    "privacy":"unlisted",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "splash": {
-      "image": "./assets/splash.png",
+      "image": "./assets/1024.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#03a4aa"
     },
     "updates": {
       "fallbackToCacheTimeout": 0
@@ -17,16 +18,32 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.resolutetek.hier-app",
+      "buildNumber": "1.0.1",
+      "config": {
+        "googleMapsApiKey": "AIzaSyA1Qh-Yqg6DKDg2wJw_447oMYnOxFBa-Qc"
+    }
     },
     "android": {
+      "permissions": [
+        "ACCESS_BACKGROUND_LOCATION",
+        "ACCESS_FINE_LOCATION"
+      ],
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
+      },
+      "package": "com.anitahongekar.hier",
+      "config": {
+        "googleMaps": {
+          "apiKey": "AIzaSyA1Qh-Yqg6DKDg2wJw_447oMYnOxFBa-Qc"
+        }
       }
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "description": ""
   }
 }
