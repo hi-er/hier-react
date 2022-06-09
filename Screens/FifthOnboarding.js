@@ -104,7 +104,7 @@ export default class FifthOnboarding extends React.Component {
       </View> 
       <View style={styles.bottomView}>
         <TouchableOpacity onPress={()=> this.props.navigation.navigate("Home")}>
-          <Text style={{color:"#03a4aa",fontFamily:"SpartanBold",textAlign:"right"}}>Skip</Text>
+          <Text style={{color:"#03a4aa",fontFamily:"SpartanBold",fontSize:16,textAlign:"right",marginRight:18}}>Skip</Text>
         </TouchableOpacity>
           </View>
       </View>

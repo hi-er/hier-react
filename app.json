@@ -2,8 +2,8 @@
   "expo": {
     "name": "hier",
     "slug": "hier-app",
-    "privacy":"unlisted",
-    "version": "1.0.0",
+    "privacy":"public",
+    "version": "1.0.1",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "splash": {
@@ -20,21 +20,24 @@
     "ios": {
       "supportsTablet": true,
       "bundleIdentifier": "com.resolutetek.hier-app",
-      "buildNumber": "1.0.1",
+      "buildNumber": "1.0.2",
       "config": {
         "googleMapsApiKey": "AIzaSyA1Qh-Yqg6DKDg2wJw_447oMYnOxFBa-Qc"
     }
     },
     "android": {
       "permissions": [
-        "ACCESS_BACKGROUND_LOCATION",
+
         "ACCESS_FINE_LOCATION"
       ],
+      "icon": "./assets/icon.png",
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
       },
-      "package": "com.anitahongekar.hier",
+      "package": "com.resolutetek.hierapp",
+      "softwareKeyboardLayoutMode":"pan",
+      "versionCode": 4,
       "config": {
         "googleMaps": {
           "apiKey": "AIzaSyA1Qh-Yqg6DKDg2wJw_447oMYnOxFBa-Qc"

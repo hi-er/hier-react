@@ -1,7 +1,10 @@
 import React from 'react';
-import { StyleSheet, Text, View, TextInput, TouchableOpacity,Image,ActivityIndicator,
+import { StyleSheet, Text, View, TextInput,
+  //  TouchableOpacity,
+   Image,ActivityIndicator,
 SafeAreaView,ScrollView,Alert
 } from  'react-native';
+import { TouchableOpacity} from 'react-native-gesture-handler'
 
 import AppLoading from 'expo-app-loading';
 import * as Font from 'expo-font'; 
@@ -45,6 +48,7 @@ export default class SecondOnboarding extends React.Component {
     
   }
   toggleFullTime(){
+    
     this.setState({
       isFullTime:!this.state.isFullTime
     })
@@ -175,8 +179,9 @@ GotoThirdOnboarding(){
             <ScrollView>
             <View style={{height:25}}></View>
          <View style={{flex:1,flexDirection:"row",margin:5}}>
+           <View style={{aspectRatio: 1.5,width: '47%',alignItems:"center",justifyContent:"center",padding:5,margin:5}}>
       
-          <TouchableOpacity  onPress={()=> this.toggleFullTime()} style={{zIndex: 1, aspectRatio: 1.5,width: '47%',alignItems:"center",justifyContent:"center",padding:5,margin:5}}>
+          <TouchableOpacity  onPress={()=> this.toggleFullTime()} style={{ aspectRatio: 1.5,alignItems:"center",justifyContent:"center",padding:5,margin:5}}>
          
               {!this.state.isFullTime?
                   <Image
@@ -192,9 +197,12 @@ GotoThirdOnboarding(){
                   
               }
               <Text style={{color:!this.state.isFullTime?"#fff":"#0f3360",fontSize:18,marginTop:10,fontFamily:"SpartanMedium"}}>full time</Text>
+              
           </TouchableOpacity>
+          </View>
+          <View style={{aspectRatio: 1.5,width: '47%',alignItems:"center",justifyContent:"center",padding:5,margin:5}}>
 
-          <TouchableOpacity  onPress={()=> this.togglePartTime()} style={{zIndex: 1, aspectRatio: 1.5,width: '47%',alignItems:"center",justifyContent:"center",padding:5,margin:5}}>
+          <TouchableOpacity  onPress={()=> this.togglePartTime()} style={{ aspectRatio: 1.5,alignItems:"center",justifyContent:"center",padding:5,margin:5}}>
          
          {!this.state.isCasual?
              <Image
@@ -212,11 +220,13 @@ GotoThirdOnboarding(){
          <Text style={{color:!this.state.isCasual?"#fff":"#0f3360",fontSize:18,marginTop:10,fontFamily:"SpartanMedium"}}>casual</Text>
      </TouchableOpacity>
    </View>
+   </View>
   
 
    <View style={{flex:1,flexDirection:"row",margin:5}}>
       
-          <TouchableOpacity  onPress={()=> this.toggleOffice()} style={{zIndex: 1, aspectRatio: 1.5,width: '47%',alignItems:"center",justifyContent:"center",padding:5,margin:5}}>
+   <View style={{aspectRatio: 1.5,width: '47%',alignItems:"center",justifyContent:"center",padding:5,margin:5}}>
+          <TouchableOpacity  onPress={()=> this.toggleOffice()} style={{zIndex: 1, aspectRatio: 1.5,alignItems:"center",justifyContent:"center",padding:5,margin:5}}>
          
               {!this.state.isOffice?
                   <Image
@@ -233,8 +243,9 @@ GotoThirdOnboarding(){
               }
               <Text style={{color:!this.state.isOffice?"#fff":"#0f3360",fontSize:18,marginTop:10,fontFamily:"SpartanMedium"}}>office</Text>
           </TouchableOpacity>
-
-          <TouchableOpacity  onPress={()=> this.toggleRemote()} style={{zIndex: 1, aspectRatio: 1.5,width: '47%',alignItems:"center",justifyContent:"center",padding:5,margin:5}}>
+          </View>
+          <View style={{aspectRatio: 1.5,width: '47%',alignItems:"center",justifyContent:"center",padding:5,margin:5}}>
+          <TouchableOpacity  onPress={()=> this.toggleRemote()} style={{zIndex: 1, aspectRatio: 1.5,alignItems:"center",justifyContent:"center",padding:5,margin:5}}>
          
          {!this.state.isRemote?
              <Image
@@ -252,10 +263,12 @@ GotoThirdOnboarding(){
          <Text style={{color:!this.state.isRemote?"#fff":"#0f3360",fontSize:18,marginTop:10,fontFamily:"SpartanMedium"}}>remote</Text>
      </TouchableOpacity>
    </View>
+   </View>
   
    <View style={{flex:1,flexDirection:"row",margin:5}}>
-      
-      <TouchableOpacity  onPress={()=> this.toggleHospitality()} style={{zIndex: 1, aspectRatio: 1.5,width: '47%',alignItems:"center",justifyContent:"center",padding:5,margin:5}}>
+   <View style={{aspectRatio: 1.5,width: '47%',alignItems:"center",justifyContent:"center",padding:5,margin:5}}>
+
+      <TouchableOpacity  onPress={()=> this.toggleHospitality()} style={{zIndex: 1, aspectRatio: 1.5,alignItems:"center",justifyContent:"center",padding:5,margin:5}}>
      
           {!this.state.isHospitality?
               <Image
@@ -272,8 +285,10 @@ GotoThirdOnboarding(){
           }
           <Text style={{color:!this.state.isHospitality?"#fff":"#0f3360",fontSize:18,marginTop:10,fontFamily:"SpartanMedium"}}>hospitality</Text>
       </TouchableOpacity>
+      </View>
+  <View style={{aspectRatio: 1.5,width: '47%',alignItems:"center",justifyContent:"center",padding:5,margin:5}}>
 
-      <TouchableOpacity  onPress={()=> this.toggleActive()} style={{zIndex: 1, aspectRatio: 1.5,width: '47%',alignItems:"center",justifyContent:"center",padding:5,margin:5}}>
+      <TouchableOpacity  onPress={()=> this.toggleActive()} style={{zIndex: 1, aspectRatio: 1.5,alignItems:"center",justifyContent:"center",padding:5,margin:5}}>
      
      {!this.state.isActive?
          <Image
@@ -291,11 +306,12 @@ GotoThirdOnboarding(){
      <Text style={{color:!this.state.isActive?"#fff":"#0f3360",fontSize:18,marginTop:10,fontFamily:"SpartanMedium"}}>active</Text>
  </TouchableOpacity>
 </View>
+</View>
 
 
 <View style={{flex:1,flexDirection:"row",margin:5}}>
-      
-      <TouchableOpacity  onPress={()=> this.toggleRetail()} style={{zIndex: 1, aspectRatio: 1.5,width: '47%',alignItems:"center",justifyContent:"center",padding:5,margin:5}}>
+        <View style={{aspectRatio: 1.5,width: '47%',alignItems:"center",justifyContent:"center",padding:5,margin:5}}>
+      <TouchableOpacity  onPress={()=> this.toggleRetail()} style={{zIndex: 1, aspectRatio: 1.5,alignItems:"center",justifyContent:"center",padding:5,margin:5}}>
      
           {!this.state.isRetail?
               <Image
@@ -312,8 +328,9 @@ GotoThirdOnboarding(){
           }
           <Text style={{color:!this.state.isRetail?"#fff":"#0f3360",fontSize:18,marginTop:10,fontFamily:"SpartanMedium"}}>retail</Text>
       </TouchableOpacity>
-
-      <TouchableOpacity  onPress={()=> this.toggleEducation()} style={{zIndex: 1, aspectRatio: 1.5,width: '47%',alignItems:"center",justifyContent:"center",padding:5,margin:5}}>
+      </View>
+      <View style={{aspectRatio: 1.5,width: '47%',alignItems:"center",justifyContent:"center",padding:5,margin:5}}>
+      <TouchableOpacity  onPress={()=> this.toggleEducation()} style={{zIndex: 1, aspectRatio: 1.5,alignItems:"center",justifyContent:"center",padding:5,margin:5}}>
      
      {!this.state.isEducation?
          <Image
@@ -330,10 +347,12 @@ GotoThirdOnboarding(){
      }
      <Text style={{color:!this.state.isEducation?"#fff":"#0f3360",fontSize:18,marginTop:10}}>education</Text>
  </TouchableOpacity>
+ </View>
 </View>
 <View style={{flex:1,flexDirection:"row",margin:5}}>
       
-      <TouchableOpacity  onPress={()=> this.toggleTrade()} style={{zIndex: 1, aspectRatio: 1.5,width: '47%',alignItems:"center",justifyContent:"center",padding:5,margin:5}}>
+<View style={{aspectRatio: 1.5,width: '47%',alignItems:"center",justifyContent:"center",padding:5,margin:5}}>
+      <TouchableOpacity  onPress={()=> this.toggleTrade()} style={{zIndex: 1, aspectRatio: 1.5,alignItems:"center",justifyContent:"center",padding:5,margin:5}}>
      
           {!this.state.isTrade?
               <Image
@@ -344,14 +363,15 @@ GotoThirdOnboarding(){
               <Image
                 resizeMode="contain"
                 style={{height:70}}
-                source={require('../assets/icons/Trade.png')}
+                source={require('../assets/icons/Trade_Selected.png')}
               />
               
           }
           <Text style={{color:!this.state.isTrade?"#fff":"#0f3360",fontSize:18,marginTop:10,fontFamily:"SpartanMedium"}}>trade</Text>
       </TouchableOpacity>
-
-      <TouchableOpacity  onPress={()=> this.toggleDriving()} style={{zIndex: 1, aspectRatio: 1.5,width: '47%',alignItems:"center",justifyContent:"center",padding:5,margin:5}}>
+      </View>
+      <View style={{aspectRatio: 1.5,width: '47%',alignItems:"center",justifyContent:"center",padding:5,margin:5}}>
+      <TouchableOpacity  onPress={()=> this.toggleDriving()} style={{zIndex: 1, aspectRatio: 1.5,alignItems:"center",justifyContent:"center",padding:5,margin:5}}>
      
      {!this.state.isDriving?
          <Image
@@ -368,6 +388,7 @@ GotoThirdOnboarding(){
      }
      <Text style={{color:!this.state.isDriving?"#fff":"#0f3360",fontSize:18,marginTop:10,fontFamily:"SpartanMedium"}}>driving</Text>
  </TouchableOpacity>
+ </View>
 </View>
 
 

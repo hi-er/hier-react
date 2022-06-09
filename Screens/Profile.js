@@ -303,9 +303,25 @@ async PostUpdateProfile(){
      
 
             <View style={{height:25}}></View>
+
+
+
+
+
+
+
+            
+
+
+
+
+
+
+
          <View style={{flex:1,flexDirection:"row",margin:5}}>
+           <View style={{aspectRatio: 1.5,width: '47%',alignItems:"center",justifyContent:"center",padding:5,margin:5}}>
       
-          <TouchableOpacity  onPress={()=> this.toggleFullTime()} style={{zIndex: 1, aspectRatio: 1.5,width: '47%',alignItems:"center",justifyContent:"center",padding:5,margin:5}}>
+          <TouchableOpacity  onPress={()=> this.toggleFullTime()} style={{ aspectRatio: 1.5,alignItems:"center",justifyContent:"center",padding:5,margin:5}}>
          
               {!this.state.isFullTime?
                   <Image
@@ -321,9 +337,12 @@ async PostUpdateProfile(){
                   
               }
               <Text style={{color:!this.state.isFullTime?"#fff":"#0f3360",fontSize:18,marginTop:10,fontFamily:"SpartanMedium"}}>full time</Text>
+              
           </TouchableOpacity>
+          </View>
+          <View style={{aspectRatio: 1.5,width: '47%',alignItems:"center",justifyContent:"center",padding:5,margin:5}}>
 
-          <TouchableOpacity  onPress={()=> this.togglePartTime()} style={{zIndex: 1, aspectRatio: 1.5,width: '47%',alignItems:"center",justifyContent:"center",padding:5,margin:5}}>
+          <TouchableOpacity  onPress={()=> this.togglePartTime()} style={{ aspectRatio: 1.5,alignItems:"center",justifyContent:"center",padding:5,margin:5}}>
          
          {!this.state.isPartTime?
              <Image
@@ -341,11 +360,13 @@ async PostUpdateProfile(){
          <Text style={{color:!this.state.isPartTime?"#fff":"#0f3360",fontSize:18,marginTop:10,fontFamily:"SpartanMedium"}}>casual</Text>
      </TouchableOpacity>
    </View>
+   </View>
   
 
    <View style={{flex:1,flexDirection:"row",margin:5}}>
       
-          <TouchableOpacity  onPress={()=> this.toggleOffice()} style={{zIndex: 1, aspectRatio: 1.5,width: '47%',alignItems:"center",justifyContent:"center",padding:5,margin:5}}>
+   <View style={{aspectRatio: 1.5,width: '47%',alignItems:"center",justifyContent:"center",padding:5,margin:5}}>
+          <TouchableOpacity  onPress={()=> this.toggleOffice()} style={{zIndex: 1, aspectRatio: 1.5,alignItems:"center",justifyContent:"center",padding:5,margin:5}}>
          
               {!this.state.isOffice?
                   <Image
@@ -362,8 +383,9 @@ async PostUpdateProfile(){
               }
               <Text style={{color:!this.state.isOffice?"#fff":"#0f3360",fontSize:18,marginTop:10,fontFamily:"SpartanMedium"}}>office</Text>
           </TouchableOpacity>
-
-          <TouchableOpacity  onPress={()=> this.toggleRemote()} style={{zIndex: 1, aspectRatio: 1.5,width: '47%',alignItems:"center",justifyContent:"center",padding:5,margin:5}}>
+          </View>
+          <View style={{aspectRatio: 1.5,width: '47%',alignItems:"center",justifyContent:"center",padding:5,margin:5}}>
+          <TouchableOpacity  onPress={()=> this.toggleRemote()} style={{zIndex: 1, aspectRatio: 1.5,alignItems:"center",justifyContent:"center",padding:5,margin:5}}>
          
          {!this.state.isRemote?
              <Image
@@ -381,10 +403,12 @@ async PostUpdateProfile(){
          <Text style={{color:!this.state.isRemote?"#fff":"#0f3360",fontSize:18,marginTop:10,fontFamily:"SpartanMedium"}}>remote</Text>
      </TouchableOpacity>
    </View>
+   </View>
   
    <View style={{flex:1,flexDirection:"row",margin:5}}>
-      
-      <TouchableOpacity  onPress={()=> this.toggleHospitality()} style={{zIndex: 1, aspectRatio: 1.5,width: '47%',alignItems:"center",justifyContent:"center",padding:5,margin:5}}>
+   <View style={{aspectRatio: 1.5,width: '47%',alignItems:"center",justifyContent:"center",padding:5,margin:5}}>
+
+      <TouchableOpacity  onPress={()=> this.toggleHospitality()} style={{zIndex: 1, aspectRatio: 1.5,alignItems:"center",justifyContent:"center",padding:5,margin:5}}>
      
           {!this.state.isHospitality?
               <Image
@@ -401,8 +425,10 @@ async PostUpdateProfile(){
           }
           <Text style={{color:!this.state.isHospitality?"#fff":"#0f3360",fontSize:18,marginTop:10,fontFamily:"SpartanMedium"}}>hospitality</Text>
       </TouchableOpacity>
+      </View>
+  <View style={{aspectRatio: 1.5,width: '47%',alignItems:"center",justifyContent:"center",padding:5,margin:5}}>
 
-      <TouchableOpacity  onPress={()=> this.toggleActive()} style={{zIndex: 1, aspectRatio: 1.5,width: '47%',alignItems:"center",justifyContent:"center",padding:5,margin:5}}>
+      <TouchableOpacity  onPress={()=> this.toggleActive()} style={{zIndex: 1, aspectRatio: 1.5,alignItems:"center",justifyContent:"center",padding:5,margin:5}}>
      
      {!this.state.isActive?
          <Image
@@ -420,11 +446,12 @@ async PostUpdateProfile(){
      <Text style={{color:!this.state.isActive?"#fff":"#0f3360",fontSize:18,marginTop:10,fontFamily:"SpartanMedium"}}>active</Text>
  </TouchableOpacity>
 </View>
+</View>
 
 
 <View style={{flex:1,flexDirection:"row",margin:5}}>
-      
-      <TouchableOpacity  onPress={()=> this.toggleRetail()} style={{zIndex: 1, aspectRatio: 1.5,width: '47%',alignItems:"center",justifyContent:"center",padding:5,margin:5}}>
+        <View style={{aspectRatio: 1.5,width: '47%',alignItems:"center",justifyContent:"center",padding:5,margin:5}}>
+      <TouchableOpacity  onPress={()=> this.toggleRetail()} style={{zIndex: 1, aspectRatio: 1.5,alignItems:"center",justifyContent:"center",padding:5,margin:5}}>
      
           {!this.state.isRetail?
               <Image
@@ -441,8 +468,9 @@ async PostUpdateProfile(){
           }
           <Text style={{color:!this.state.isRetail?"#fff":"#0f3360",fontSize:18,marginTop:10,fontFamily:"SpartanMedium"}}>retail</Text>
       </TouchableOpacity>
-
-      <TouchableOpacity  onPress={()=> this.toggleEducation()} style={{zIndex: 1, aspectRatio: 1.5,width: '47%',alignItems:"center",justifyContent:"center",padding:5,margin:5}}>
+      </View>
+      <View style={{aspectRatio: 1.5,width: '47%',alignItems:"center",justifyContent:"center",padding:5,margin:5}}>
+      <TouchableOpacity  onPress={()=> this.toggleEducation()} style={{zIndex: 1, aspectRatio: 1.5,alignItems:"center",justifyContent:"center",padding:5,margin:5}}>
      
      {!this.state.isEducation?
          <Image
@@ -457,12 +485,14 @@ async PostUpdateProfile(){
          />
          
      }
-     <Text style={{color:!this.state.isEducation?"#fff":"#0f3360",fontSize:18,marginTop:10,fontFamily:"SpartanMedium"}}>education</Text>
+     <Text style={{color:!this.state.isEducation?"#fff":"#0f3360",fontSize:18,marginTop:10}}>education</Text>
  </TouchableOpacity>
+ </View>
 </View>
 <View style={{flex:1,flexDirection:"row",margin:5}}>
       
-      <TouchableOpacity  onPress={()=> this.toggleTrade()} style={{zIndex: 1, aspectRatio: 1.5,width: '47%',alignItems:"center",justifyContent:"center",padding:5,margin:5}}>
+<View style={{aspectRatio: 1.5,width: '47%',alignItems:"center",justifyContent:"center",padding:5,margin:5}}>
+      <TouchableOpacity  onPress={()=> this.toggleTrade()} style={{zIndex: 1, aspectRatio: 1.5,alignItems:"center",justifyContent:"center",padding:5,margin:5}}>
      
           {!this.state.isTrade?
               <Image
@@ -473,14 +503,15 @@ async PostUpdateProfile(){
               <Image
                 resizeMode="contain"
                 style={{height:70}}
-                source={require('../assets/icons/Trade.png')}
+                source={require('../assets/icons/Trade_Selected.png')}
               />
               
           }
           <Text style={{color:!this.state.isTrade?"#fff":"#0f3360",fontSize:18,marginTop:10,fontFamily:"SpartanMedium"}}>trade</Text>
       </TouchableOpacity>
-
-      <TouchableOpacity  onPress={()=> this.toggleDriving()} style={{zIndex: 1, aspectRatio: 1.5,width: '47%',alignItems:"center",justifyContent:"center",padding:5,margin:5}}>
+      </View>
+      <View style={{aspectRatio: 1.5,width: '47%',alignItems:"center",justifyContent:"center",padding:5,margin:5}}>
+      <TouchableOpacity  onPress={()=> this.toggleDriving()} style={{zIndex: 1, aspectRatio: 1.5,alignItems:"center",justifyContent:"center",padding:5,margin:5}}>
      
      {!this.state.isDriving?
          <Image
@@ -497,7 +528,20 @@ async PostUpdateProfile(){
      }
      <Text style={{color:!this.state.isDriving?"#fff":"#0f3360",fontSize:18,marginTop:10,fontFamily:"SpartanMedium"}}>driving</Text>
  </TouchableOpacity>
+ </View>
 </View>
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
